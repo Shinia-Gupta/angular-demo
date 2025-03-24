@@ -1,0 +1,43 @@
+<p>ng-template-eg works!</p>
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>ng-template</h1>
+    </div>
+    <div class="row pt-3">
+    <div class="col-3">
+    <div class="bg-primary p-3" *ngIf="isUserLoggedIn;else userNotLoggedin">
+{{loggedInUsername}}   
+ </div>
+ <ng-template #userNotLoggedin>
+    <div class="bg-primary p-3" >
+        <span>User not logged in</span>
+         </div>
+ </ng-template>
+    </div>
+    </div>
+    <div>
+        <ng-template #dynamicTemp1>
+            <div class="bg-primary p-3" >
+                <span>Dynamic Temp 1</span>
+                 </div>
+         </ng-template>
+         <ng-template #dynamicTemp2>
+            <div class="bg-primary p-3" >
+                <span>Dynamic Temp 2</span>
+                 </div>
+         </ng-template>
+         <ng-template #dynamicTemp3>
+            <div class="bg-primary p-3" >
+                <span>Dynamic Temp 3</span>
+                 </div>
+         </ng-template>
+    </div>
+
+    <div #dynamicContainer></div>
+    <div class="row pt-3">
+    <div class="col-3 text-center">
+    <button class="btn btn-success mx-2" (click)="loadTemplate1()">Load Template 1</button>
+    <button class="btn btn-success mx-2" (click)="loadTemplate2()">Load Template 2</button>
+    <button class="btn btn-success mx-2" (click)="loadTemplate3()">Load Template 3</button>
+
+</div>
+    </div>

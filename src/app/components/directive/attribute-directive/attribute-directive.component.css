@@ -1,0 +1,163 @@
+.bg-primary {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white; /* Ensures text is visible */
+}
+
+.bg-danger {
+    background-color:rgb(255, 0, 21); /* Bootstrap primary blue */
+    color: white; /* Ensures text is visible */
+}
+
+.bg-success {
+    background-color:rgb(95, 228, 34); /* Bootstrap primary blue */
+    color: white; /* Ensures text is visible */
+}
+
+/* Spacing and padding */
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.pt-3 {
+    padding-top: 1rem;
+}
+
+.pt-4 {
+    padding-top: 1.5rem;
+}
+
+/* Background colors */
+.bg-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.bg-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.bg-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.bg-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Text styles */
+.text-white {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Rounded corners */
+.rounded {
+    border-radius: 0.25rem;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Button margin */
+.mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Grid system */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0.5rem;
+}
+
+.col-5 {
+    flex: 0 0 41.66%;
+    max-width: 41.66%;
+    padding: 0.5rem;
+}
+
+/* Input and select styles */
+.width-50 {
+    width: 50%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Table styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table th, .table td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+/* Progress bar */
+.progress {
+    width: 100%;
+    height: 1rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 50%; /* Change as needed */
+    height: 100%;
+    background-color: #007bff;
+}

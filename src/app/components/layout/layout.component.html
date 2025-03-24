@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="javascript: void(0)">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item" style="margin-top: - 12px;">
+    <a class="nav-link"routerLink="data-binding">Data binding</a>
+    </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="add-emp">Add Employee</a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="str-dir">Structural Dir</a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="attribute-dir">Attribute Dir</a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link active" routerLink="if-else-comp">If Else Component</a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="for-and-switch">For and Switch Component</a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="pipe-demo">Pipe Component</a>
+                </li>
+
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="template-form">Template form Component</a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="reactive-form">Reactive form Component</a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="get-api">Get API</a>
+                </li> 
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="post-api">Post API </a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="lifecycle-events">Lifecycle events</a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="ng-template-eg">Ng Template</a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="ng-container-eg">Ng Container</a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="view-child-decorator">View Child Decorator</a>
+                </li>
+                <li class="nav-item" style="margin-top: - 12px;">
+                    <a class="nav-link" routerLink="signal">Signal</a>
+                </li>
+                <li>
+                    <form action="" class="d-flex">
+                        <select name="selectedRole" id="" [(ngModel)]="selectedRole" (ngModelChange)="onRoleChange($event)">
+                            <option value="">Select Role</option>
+                            <option value="user">User Role</option>
+                            <option value="guest">Guest Role</option>
+                        </select>
+                      </form>   
+                </li>
+                <span>{{loggedUserData}}</span>
+                <button (click)="logout()">Logout</button>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+<div>
+    <router-outlet></router-outlet>
+
+
+
+</div>

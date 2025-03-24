@@ -1,0 +1,159 @@
+<p>structural-dir works!</p>
+
+<style>
+  .container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 5px;
+  }
+  .button-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .button-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .button-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .col-3 {
+    flex: 1;
+    text-align: center;
+  }
+  .col-5 {
+    flex: 2;
+  }
+  .bg-danger { background-color: red; color: white; padding: 10px; }
+  .bg-success { background-color: green; color: white; padding: 10px; }
+  .bg-secondary { background-color: gray; color: white; padding: 10px; }
+  .bg-primary { background-color: blue; color: white; padding: 10px; }
+  .width-50 { width: 50%; margin: 5px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid black; padding: 5px; text-align: left; }
+</style>
+
+<div class="container">
+    <h1>Structural Directive</h1>
+    <p>*ngIf, *ngFor...</p>
+    <button class="button-primary" (click)="goToAttributeDir()">Go To Attribute</button>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <div *ngIf="isDiv1Visible" class="bg-danger">
+           <h4>Div-1</h4> 
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="bg-success" *ngIf="isDiv2Visible">
+            <h4>Div-2</h4> 
+        </div>
+    </div> 
+    <div class="col-3">
+        <div class="bg-secondary" *ngIf="num1==num2">
+            <h4>Div-3</h4> 
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="bg-primary" *ngIf='selectedState=="USA"'>
+            <h4>Div-4</h4> 
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <button class="button-danger" (click)='hideDiv1()'>Hide</button>
+        <button class="button-primary" (click)='showDiv1()'>Show</button>
+    </div>
+    <div class="col-3">
+        <button class="button-success" (click)='toggleDiv2()'>Toggle</button>
+    </div> 
+    <div class="col-3">
+        <div style="display: flex; align-items: center;">
+            <input type="text" [(ngModel)]='num1' placeholder="Num-1" class="width-50">
+            <input type="text" [(ngModel)]='num2' placeholder="Num-2" class="width-50">
+        </div>
+    </div>
+    <div class="col-3">
+        <div style="display: flex; align-items: center;">
+            <input type="checkbox" [(ngModel)]='isBoxChecked'>
+            <select [(ngModel)]='selectedState'>
+                <option value="">Select State</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Shrilanka">Shrilanka</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let city of cityArray">{{city}}</li>
+        </ul>
+    </div>
+    <div class="col-3">
+        <div *ngFor="let cityName of cityArray">{{cityName}}</div>
+    </div>
+    <div class="col-3">
+        <select>
+            <option></option>
+        </select>
+    </div>
+    <div class="col-3">
+        <select>
+            <option *ngFor='let student of studentList'>{{student.studId}}</option>
+            
+        </select>
+        <select>
+            <option *ngFor='let student of studentList'>{{student.name}}</option>
+            
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Status</th>  
+                </tr> 
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of studentList">
+                    <td>{{student.studId}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.city}}</td>
+                    <td>
+                        <span *ngIf='student.isActive'>Active</span>
+                        <span *ngIf='!student.isActive'>De-Active</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

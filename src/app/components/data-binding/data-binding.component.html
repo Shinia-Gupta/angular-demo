@@ -1,0 +1,57 @@
+<h1>data-binding works!</h1>
+<div class="table">
+    <div class="row">
+        One way binding - Interpolation
+        <div class="col-1">
+<h4>{{courseName}}</h4>
+<h4>{{inputType}}</h4>
+<input type="{{inputType}}" >
+<input type="text" name="" id="" value="{{courseName}}">
+        </div>
+    </div>
+
+
+    <div class="row">
+        One way binding - Property binding
+        <div class="col-2">
+
+<input type="text" [value]="courseName">
+        </div>
+    </div>
+
+
+    <div class="row">
+Events
+        <div class="col-3">
+
+<button (click)="showAlert('Welcome angular 18')">Welcome</button>  
+      </div>
+    </div>
+
+
+    <div class="row">
+                <div class="col-4">
+        
+        <button (click)="changeCourseName('React js')">Change course name</button>  
+              </div>
+            </div>
+
+            <div class="row">
+                2 way data binding - ngModel
+                <div class="col-5">
+        <input type="text" [(ngModel)]="courseName"> -{{courseName}}
+        <select name="" id="" [(ngModel)]="stateName">
+            <option value="">Select</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Goa">Goa</option>
+        </select>
+              </div>
+
+              <div class="row">
+                2 way data binding - signal
+                <div class="col-5">
+        <h2>{{firstName()}}</h2>
+              </div>
+            </div>
+</div>
